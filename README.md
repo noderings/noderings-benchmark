@@ -1,12 +1,12 @@
 # noderings-benchmark
 
-**Noderings live validation benchmark**: single-file Linux tool for VPS / cloud instance validation. Used by [Noderings](https://noderings.com) to measure CPU, memory, storage, and network before fleet rollout.
+**NodeRings live validation benchmark**: single-file Linux tool for VPS / cloud instance validation. Used by [NodeRings](https://noderings.com) to measure CPU, memory, storage, and network before a plan is listed.
 
 Repository: https://github.com/noderings/noderings-benchmark
 
 ## Quick start
 
-**On a pilot VPS** (download directly from GitHub: used by Noderings live validation):
+**On a pilot VPS** (download directly from GitHub: used by NodeRings live validation):
 
 ```bash
 curl -fsSL -o nr-liveval.sh \
@@ -86,7 +86,7 @@ Override: `RESULTS_DIR=/path/to/out ./nr-liveval.sh`
 
 **Raw metrics**: each value is the **mean (average)** over repeated samples (default 5) in real units (events/s, MiB/s, Mbps). Min, max, and CV% are also stored under `statistics`. Samples are separated by a settle delay (`BENCH_SETTLE_MS`, default 2000 ms) with cache sync between runs.
 
-**Noderings score**: indexed vs a reference VPS profile where **1000 = reference** on each category:
+**NodeRings score**: indexed vs a reference VPS profile where **1000 = reference** on each category. The JSON field is still `noderings_score`.
 
 | Category | Formula |
 |----------|---------|
